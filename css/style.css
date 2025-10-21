@@ -1,0 +1,187 @@
+/* =============================== */
+/* 1. RESET CSS E ESTILOS BASE */
+/* =============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+body{
+    font-family: 'Poppins', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #faf7f2;
+    color: #593c30;
+    padding-top: 60px;
+}
+ul{
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #ff8c42;
+}
+/* =============================== */
+/* 2. ESTILOS DO CABEÇALHO (Mobile) */
+/* =============================== */
+header{
+    background-color: #593c30;
+    color: #faf7f2;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+/*    justify-content: space-between; */
+/*    align-items: center; */
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+nav ul{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+nav ul li {
+    margin-top: 5px;
+}
+nav ul li a{
+    color: #faf7f2;
+    font-weight: 600;
+}
+
+header h1{
+    font-size: 1.2em;
+    margin: 0;
+    margin-bottom: 10px;
+}
+header a{
+    color: #faf7f2;
+}
+/* =============================== */
+/* 3. ESTILOS GERAIS DO LAYOUT (Mobile) */
+/* =============================== */
+main{
+    padding: 20px;
+}
+section{
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+h2, h3 {
+    color: #593c30;
+    margin-bottom: 10px;
+}
+article h3{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+/* =============================== */
+/* 4. ESTILOS DE FORMULÁRIOS E INPUTS */
+/* =============================== */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    color: #333;
+    background-color: #fff;
+}
+.cadastro-form div{
+    margin-bottom: 15px;
+}
+fieldset{
+    border: 1px solid #593c30;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+}
+legend{
+    font-weight: 700;
+    color: #593c30;
+    padding: 0 10px;
+}
+/* =============================== */
+/* 5. ESTILOS DE BOTÕES DE AÇÃO */
+/* =============================== */
+button[type="submit"],
+.btn-enviar{
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #ff8c42;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button[type="submit"]:hover, .btn-enviar{
+    background-color: #e67e36;
+}
+/* =============================== */
+/* 6. RESPONSIVIDADE (MEDIA QUERIES) */
+/* =============================== */
+@media screen and (min-width: 768px) {
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header h1{
+        font-size: 1.5em;
+        margin-bottom: 0;
+    }
+    nav{
+        display: block;
+    }
+    nav ul{
+        flex-direction: row;
+    }
+    nav ul li{
+        margin-left: 20px;
+        margin-top: 0;
+    }
+    .secao-projetos-grid{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+    .secao-projetos-grid article{
+        width: calc(50% - 12.5px);
+    }
+    footer{
+        text-align: center;
+        padding: 20px 50px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    main{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .secao-projetos-grid article{
+        width: calc(33.33% - 16.66px);
+    }
+}

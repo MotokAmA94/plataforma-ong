@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro | Gatitos ONG</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
@@ -51,7 +52,8 @@
                 <div>
                     <label for="tel">Telefone:</label>
                     <input type="tel" id="tel" name="tel"
-                           pattern="\(\d{2}\) \d{4,5}-\d{4}"
+                           pattern="\(\d{2}\)\d{4,5}-\d{4}"
+                           title="O telefone deve estar no formato (99)99999-9999"
                            required>
                 </div>
             </fieldset>
